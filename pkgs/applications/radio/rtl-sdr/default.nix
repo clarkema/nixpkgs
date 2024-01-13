@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
       --replace "VERSION_INFO_PATCH_VERSION git" "VERSION_INFO_PATCH_VERSION ${lib.versions.patch version}"
 
     substituteInPlace rtl-sdr.rules \
-      --replace 'MODE:="0666"' 'ENV{ID_SOFTWARE_RADIO}="1", MODE="0660", GROUP="plugdev"'
+      --replace 'MODE:="0666"' 'ENV{ID_SOFTWARE_RADIO}="1", MODE="0660", GROUP="plugdev", TAG+="uaccess"'
   '';
 
   nativeBuildInputs = [ pkg-config cmake ];
