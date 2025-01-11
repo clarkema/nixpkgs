@@ -1801,6 +1801,23 @@ let
         };
       };
 
+      espressif.vscode-esp-idf-extension = buildVscodeMarketplaceExtension {
+        mktplcRef = {
+          name = "esp-idf-extension";
+          publisher = "espressif";
+          version = "1.9.0";
+          hash = "sha256-Aym282DsR2a9KPSShcyDJzk5cy/5G9zYy37NO6A6SP8=";
+        };
+        meta = {
+          changelog = "https://marketplace.visualstudio.com/items/espressif.esp-idf-extension/changelog";
+          description = "Visual Studio Code extension for ESP-IDF projects";
+          downloadPage = "https://marketplace.visualstudio.com/items/espressif.esp-idf-extension";
+          homepage = "https://github.com/espressif/vscode-esp-idf-extension";
+          license = lib.licenses.asl20;
+          #maintainers = [ lib.maintainers.datafoo ];
+        };
+      };
+
       ethansk.restore-terminals = buildVscodeMarketplaceExtension {
         mktplcRef = {
           name = "restore-terminals";
